@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import humanizeDuration from 'humanize-duration'
-import Author from './author'
-import Comment from './comment'
-import Bottom from './bottom'
+import Author from './Author'
+import Comment from './Comment'
+import Bottom from './Bottom'
 
 const Root = styled.article`
   background: ${props => props.theme.lightBg};

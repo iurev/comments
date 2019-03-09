@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import Item from './item'
-import comment from './data.json'
+import Item from './Item'
+import comment from '../data/comment.json'
 
 const Root = styled.section`
   display: flex;

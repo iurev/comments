@@ -1,4 +1,4 @@
-export const main = {
+export default {
   darkBg: "#f7f7f7",
   lightBg: "#fff",
   darkFontColor: "#4d4d4d",
