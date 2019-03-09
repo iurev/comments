@@ -48,6 +48,8 @@ const CommentButton = styled.button`
   border: 0;
   padding: 0;
   margin: 0;
+  user-select: none;
+  cursor: pointer;
 `
 
 class Bottom extends Component {

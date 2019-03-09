@@ -42,7 +42,7 @@ const Text = styled.div`
 
 class Author extends Component {
   render() {
-    const { name, avatar } = this.props.author
+    const { name, avatar, time } = this.props.author
     return (
       <Root>
         <AvatarWrapper>
@@ -50,7 +50,7 @@ class Author extends Component {
         </AvatarWrapper>
         <TextWrapper>
           <Text>{name}</Text>
-          <Text>von 12 Minutes</Text>
+          <Text>vor {time}</Text>
         </TextWrapper>
       </Root>
     );
