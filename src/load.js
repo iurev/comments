@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import List from './list'
-import Load from './load'
+import styled from 'styled-components'
 
+const Root = styled.button`
+`
 
 class App extends Component {
   render() {
     return (
-      <>
-        <List />
-        <Load />
-      </>
+      <Root>Load</Root>
     );
   }
 }
