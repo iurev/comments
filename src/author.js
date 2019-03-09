@@ -4,14 +4,14 @@ import styled from 'styled-components'
 const Root = styled.div`
 `
 
-class User extends Component {
+class Author extends Component {
   render() {
     return (
       <Root>
-        {this.props.user.name}
+        {this.props.author.name}
       </Root>
     );
   }
 }
 
-export default User;
+export default Author;
