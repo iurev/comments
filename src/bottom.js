@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Heart } from 'styled-icons/boxicons-solid/Heart'
 import { Comment } from 'styled-icons/fa-solid/Comment'
+import Ink from 'react-ink'
 
 const Root = styled.div`
   display: flex;
@@ -41,15 +42,22 @@ const StyledComment = styled(Comment)`
 `
 
 const CommentButton = styled.button`
+  position: relative;
   appearance: none;
-  line-height: 12px;
+  line-height: 20px;
   font-size: 12px;
   color: ${p => p.theme.lightFontColor};
   border: 0;
-  padding: 0;
+  padding: 0 5px;
   margin: 0;
   user-select: none;
   cursor: pointer;
+  transition: color ease-out 0.3s;
+  outline: none;
+
+  &:hover, &:active {
+    color: ${p => p.theme.mediumFontColor};
+  }
 `
 
 class Bottom extends Component {
@@ -67,7 +75,7 @@ class Bottom extends Component {
           <Text>{answerCount}</Text>
         </Stat>
         <Time>vor {time}</Time>
-        {!closed && <CommentButton>Kommentieren</CommentButton>}
+        {!closed && <CommentButton><Ink />Kommentieren</CommentButton>}
       </Root>
     );
   }
