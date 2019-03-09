@@ -3,14 +3,27 @@ import styled from 'styled-components'
 import Html from 'dangerously-set-inner-html'
 
 const Root = styled.div`
-  color: ${props => props.theme.lightFontColor};
+`
+
+const Title = styled.div`
+  color: ${p => p.theme.darkFontColor};
+  font-size: 24px;
+  margin-bottom: 5px;
+`
+
+const Text = styled.div`
+  color: ${p => p.theme.mediumFontColor};
+  font-size: 14px;
 `
 
 class Item extends Component {
   render() {
     return (
       <Root>
-        <Html html={this.props.comment} />
+        <Title>{this.props.title}</Title>
+        <Text>
+          <Html html={this.props.text} />
+        </Text>
       </Root>
     );
   }
