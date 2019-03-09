@@ -7,11 +7,22 @@ const Root = styled.div`
   margin-bottom: 10px;
 `
 
-const Avatar = styled.img`
+const AvatarWrapper = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 20px;
   margin-right: 10px;
+  overflow: hidden;
+`
+
+const Avatar = styled.img`
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform ease-in-out 0.2s;
+  &:hover {
+    transform: scale(1.2);
+  }
 `
 
 const TextWrapper = styled.div`
@@ -34,7 +45,9 @@ class Author extends Component {
     const { name, avatar } = this.props.author
     return (
       <Root>
-        <Avatar src={avatar} alt={name} />
+        <AvatarWrapper>
+          <Avatar src={avatar} alt={name} />
+        </AvatarWrapper>
         <TextWrapper>
           <Text>{name}</Text>
           <Text>von 12 Minutes</Text>
