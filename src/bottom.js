@@ -54,7 +54,7 @@ const CommentButton = styled.button`
 
 class Bottom extends Component {
   render() {
-    const { voteCount, answerCount, closed } = this.props;
+    const { voteCount, answerCount, closed, time } = this.props;
 
     return (
       <Root>
@@ -66,7 +66,7 @@ class Bottom extends Component {
           <StyledComment />
           <Text>{answerCount}</Text>
         </Stat>
-        <Time>vor 5 Minuten</Time>
+        <Time>vor {time}</Time>
         {!closed && <CommentButton>Kommentieren</CommentButton>}
       </Root>
     );
