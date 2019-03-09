@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Html from 'dangerously-set-inner-html'
 
 const Root = styled.div`
+  margin-bottom: 10px;
 `
 
 const Title = styled.div`
