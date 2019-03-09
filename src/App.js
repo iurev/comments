@@ -6,12 +6,20 @@ import Load from './load'
 import { main } from './theme'
 
 const Root = styled.div`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
   background: ${props => props.theme.darkBg};
+  padding-bottom: 10px;
 
   .iurev-space-comments * {
     font-family: 'Open Sans', sans-serif;
+  }
+
+  .iurev-space-comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
 
