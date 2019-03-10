@@ -1,9 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './models'
+import { promises } from './middlewares'
 
 const initialState = {}
 const enhancers = []
 const middleware = [
+  promises,
 ]
 
 if (process.env.NODE_ENV === 'development') {
