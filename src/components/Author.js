@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import { UserCircle } from 'styled-icons/boxicons-solid/UserCircle'
+
 
 const Root = styled.div`
   display: flex;
@@ -20,8 +22,24 @@ const Avatar = styled.img`
   height: 100%;
   transform: scale(1);
   transition: transform ease-in-out 0.2s;
+
   &:hover {
     transform: scale(1.2);
+  }
+`
+
+const DefaultAvatar = styled(UserCircle)`
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform ease-in-out 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  path {
+    fill: ${p => p.theme.lightFontColor};
   }
 `
 
@@ -46,7 +64,11 @@ class Author extends Component {
     return (
       <Root>
         <AvatarWrapper>
-          <Avatar src={avatar} alt={name} />
+          {
+            avatar
+            ? <Avatar src={avatar} alt={name} />
+            : <DefaultAvatar />
+          }
         </AvatarWrapper>
         <TextWrapper>
           <Text>{name}</Text>
