@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import { UserCircle } from 'styled-icons/boxicons-solid/UserCircle'
 
@@ -58,25 +58,20 @@ const Text = styled.div`
   }
 `
 
-class Author extends Component {
-  render() {
-    const { name, avatar, time } = this.props.author
-    return (
-      <Root>
-        <AvatarWrapper>
-          {
-            avatar
-            ? <Avatar src={avatar} alt={name} />
-            : <DefaultAvatar />
-          }
-        </AvatarWrapper>
-        <TextWrapper>
-          <Text>{name}</Text>
-          <Text>vor {time}</Text>
-        </TextWrapper>
-      </Root>
-    );
-  }
-}
+const Author = ({ name, avatar, time }) => (
+  <Root>
+    <AvatarWrapper>
+      {
+        avatar
+        ? <Avatar src={avatar} alt={name} />
+        : <DefaultAvatar />
+      }
+    </AvatarWrapper>
+    <TextWrapper>
+      <Text>{name}</Text>
+      <Text>vor {time}</Text>
+    </TextWrapper>
+  </Root>
+);
 
 export default Author;

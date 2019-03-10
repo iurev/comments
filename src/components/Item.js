@@ -17,7 +17,7 @@ class Item extends Component {
 
     return (
       <Root>
-        <Author author={author} />
+        <Author {...author} />
         <Comment {...comment} />
         <Bottom {...bottom} />
       </Root>
