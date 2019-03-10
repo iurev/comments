@@ -1,0 +1,1 @@
+export { getFeedbacksList } from './feedbacks'

@@ -6,6 +6,7 @@ import Item from './Item'
 import {
   feedbacksLimitedList,
 } from '../selectors'
+import actions from '../actions'
 
 const Root = styled.section`
   display: flex;
@@ -18,6 +19,10 @@ const selector = createSelector(
 )
 
 class List extends Component {
+  componentDidMount() {
+    this.props.load()
+  }
+  
   render() {
     return (
       <Root>
@@ -29,5 +34,5 @@ class List extends Component {
 
 export default connect(
   state => selector(state),
-  null,
+  actions,
 )(List);
