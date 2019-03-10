@@ -11,6 +11,8 @@ import actions from '../actions'
 const Root = styled.section`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 10px;
 `
 
 const selector = createSelector(

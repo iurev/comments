@@ -17,6 +17,7 @@ const Root = styled.div`
 
   .iurev-space-comments * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
   }
 
   .iurev-space-comments {

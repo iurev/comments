@@ -7,8 +7,9 @@ import Bottom from './Bottom'
 
 const Root = styled.article`
   background: ${props => props.theme.lightBg};
-  margin: 10px;
+  margin: 10px 0;
   padding: 16px;
+  width: 100%;
 `
 
 class Item extends Component {
