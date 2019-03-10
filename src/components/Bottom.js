@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import { Heart } from 'styled-icons/boxicons-solid/Heart'
 import { Comment } from 'styled-icons/fa-solid/Comment'
@@ -60,25 +60,19 @@ const CommentButton = styled.button`
   }
 `
 
-class Bottom extends Component {
-  render() {
-    const { voteCount, answerCount, closed, time } = this.props;
-
-    return (
-      <Root>
-        <Stat>
-          <StyledHeart />
-          <Text>{voteCount}</Text>
-        </Stat>
-        <Stat>
-          <StyledComment />
-          <Text>{answerCount}</Text>
-        </Stat>
-        <Time>vor {time}</Time>
-        {!closed && <CommentButton><Ink />Kommentieren</CommentButton>}
-      </Root>
-    );
-  }
-}
+const Bottom = ({ voteCount, answerCount, closed, time }) => (
+  <Root>
+    <Stat>
+      <StyledHeart />
+      <Text>{voteCount}</Text>
+    </Stat>
+    <Stat>
+      <StyledComment />
+      <Text>{answerCount}</Text>
+    </Stat>
+    <Time>vor {time}</Time>
+    {!closed && <CommentButton><Ink />Kommentieren</CommentButton>}
+  </Root>
+);
 
 export default Bottom;
