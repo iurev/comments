@@ -1,11 +1,10 @@
 import { createActions, handleActions } from 'redux-actions';
 import { getFeedbacksList } from '../api'
-import comment from '../data/comment'
 
 const SHOW_COUNT = 5
 
 const initialState = {
-  list: [comment, comment],
+  list: [],
   limit: SHOW_COUNT,
 };
 
