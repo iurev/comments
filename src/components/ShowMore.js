@@ -3,7 +3,12 @@ import styled, { css } from 'styled-components'
 import { connect } from 'react-redux'
 import Ink from 'react-ink'
 import { ifProp } from 'styled-tools'
+import { createSelector } from 'reselect'
 import actions from '../actions'
+import {
+  feedbacksList,
+  feedbacksLimit,
+} from '../selectors'
 
 const Root = styled.button`
   position: relative;
@@ -38,9 +43,16 @@ const Root = styled.button`
   `)}
 `
 
+const selector = createSelector(
+  feedbacksList,
+  feedbacksLimit,
+  (list, limit) => ({ hidden: list.length <= limit })
+)
+
 class ShowMore extends Component {
   render() {
-    const { loading, showMore } = this.props
+    const { loading, showMore, hidden } = this.props
+    if (hidden) return null
     return (
       <Root
         onClick={showMore}
@@ -55,6 +67,6 @@ class ShowMore extends Component {
 }
 
 export default connect(
-  null,
+  state => selector(state),
   actions,
 )(ShowMore);
