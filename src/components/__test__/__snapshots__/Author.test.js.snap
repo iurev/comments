@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with all attrs 1`] = `
+<div
+  className="sc-bdVaJa msRzE"
+>
+  <div
+    className="sc-bwzfXH fqMtKx"
+  >
+    <img
+      alt="John Doe"
+      className="sc-htpNat kOUdUN"
+      src="https://example.com/image.png"
+    />
+  </div>
+  <div
+    className="sc-ifAKCX dakLHt"
+  >
+    <div
+      className="sc-EHOje bTdhSb"
+    >
+      John Doe
+    </div>
+    <div
+      className="sc-EHOje bTdhSb"
+    >
+      vor 
+      5 mins
+    </div>
+  </div>
+</div>
+`;
+
+exports[`without attrs 1`] = `
+<div
+  className="sc-bdVaJa msRzE"
+>
+  <div
+    className="sc-bwzfXH fqMtKx"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-bxivhb gXrBqi StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 18c-2.151 0-4.135-.902-5.59-2.34.753-1.807 2.515-3.088 4.59-3.088h2c2.075 0 3.837 1.281 4.59 3.088C16.135 19.098 14.151 20 12 20zm0-13c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-ifAKCX dakLHt"
+  >
+    <div
+      className="sc-EHOje bTdhSb"
+    />
+    <div
+      className="sc-EHOje bTdhSb"
+    >
+      vor 
+    </div>
+  </div>
+</div>
+`;
+
+exports[`without avatar 1`] = `
+<div
+  className="sc-bdVaJa msRzE"
+>
+  <div
+    className="sc-bwzfXH fqMtKx"
+  >
+    <svg
+      aria-hidden="true"
+      className="sc-bxivhb gXrBqi StyledIconBase-sc-bdy9j4 jbPeIR"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 18c-2.151 0-4.135-.902-5.59-2.34.753-1.807 2.515-3.088 4.59-3.088h2c2.075 0 3.837 1.281 4.59 3.088C16.135 19.098 14.151 20 12 20zm0-13c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-ifAKCX dakLHt"
+  >
+    <div
+      className="sc-EHOje bTdhSb"
+    >
+      John Doe
+    </div>
+    <div
+      className="sc-EHOje bTdhSb"
+    >
+      vor 
+      5 mins
+    </div>
+  </div>
+</div>
+`;
