@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
-import humanizeDuration from 'humanize-duration'
 import Author from './Author'
 import Comment from './Comment'
 import Bottom from './Bottom'
@@ -14,24 +13,13 @@ const Root = styled.article`
 
 class Item extends Component {
   render() {
-    const { comment: { author, body, title, attachments, statistics, closed, last_activity_at, created_at } } = this.props
-    const avatar = attachments[0].variants.profile.url // TODO: try/catch
-    // TODO: add toCamelCase function to data
-    const { vote_count, answer_count } = statistics
-
-    const authorTime = humanizeDuration(new Date() - new Date(last_activity_at), { language: 'de', largest: 1 })
-    const commentTime = humanizeDuration(new Date() - new Date(created_at), { language: 'de', largest: 1 })
+    const { author, comment, bottom } = this.props.data
 
     return (
       <Root>
-        <Author author={{ ...author, avatar, time: authorTime }} />
-        <Comment title={title} text={body} />
-        <Bottom
-          voteCount={vote_count}
-          answerCount={answer_count}
-          closed={closed}
-          time={commentTime}
-        />
+        <Author author={author} />
+        <Comment {...comment} />
+        <Bottom {...bottom} />
       </Root>
     );
   }
