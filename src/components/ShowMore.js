@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components'
+import { connect } from 'react-redux'
 import Ink from 'react-ink'
 import { ifProp } from 'styled-tools'
+import actions from '../actions'
 
 const Root = styled.button`
   position: relative;
@@ -36,12 +38,12 @@ const Root = styled.button`
   `)}
 `
 
-class App extends Component {
+class ShowMore extends Component {
   render() {
-    const { loading, onClick } = this.props
+    const { loading, showMore } = this.props
     return (
       <Root
-        onClick={onClick}
+        onClick={showMore}
         disabled={loading}
         loading={loading}
       >
@@ -52,4 +54,7 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(
+  null,
+  actions,
+)(ShowMore);

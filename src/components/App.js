@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 // import reset from 'styled-reset' TODO: use reset-css later
+import { Provider } from 'react-redux'
 import List from './List'
-import Load from './Load'
+import ShowMore from './ShowMore'
 import { main } from '../themes'
+import store from '../store'
 
 const Root = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -29,12 +31,14 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={main}>
-        <Root>
-          <div className="iurev-space-comments">
-            <List />
-            <Load />
-          </div>
-        </Root>
+        <Provider store={store}>
+          <Root>
+            <div className="iurev-space-comments">
+              <List />
+              <ShowMore />
+            </div>
+          </Root>
+        </Provider>
       </ThemeProvider>
     );
   }
