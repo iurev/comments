@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`3 1`] = `
+<ForwardRef>
+  <ForwardRef />
+  <ForwardRef />
+  <ForwardRef />
+</ForwardRef>
+`;
