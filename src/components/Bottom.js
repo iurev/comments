@@ -7,6 +7,7 @@ import Ink from 'react-ink'
 const Root = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 `
 
 const Text = styled.div`
