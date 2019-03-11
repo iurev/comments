@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node ./scripts/build-non-split.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "analize": "source-map-explorer 'build/static/js/*.js'",
@@ -39,6 +39,7 @@
     "json-server": "^0.14.2",
     "react-test-renderer": "^16.8.4",
     "redux-logger": "^3.0.6",
+    "rewire": "^4.0.1",
     "source-map-explorer": "^1.7.0",
     "webpack-bundle-analyzer": "^3.1.0"
   }
