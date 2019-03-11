@@ -60,7 +60,10 @@ class List extends Component {
   render() {
     return (
       <Root>
-        {this.props.feedbacks.map((data, i) => <Item key={i} data={data} />)}
+        {this.props.feedbacks.map((data, i) => <Item
+          key={i}
+          {...data}
+        />)}
       </Root>
     );
   }

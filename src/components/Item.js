@@ -11,18 +11,12 @@ const Root = styled.article`
   width: 100%;
 `
 
-class Item extends Component {
-  render() {
-    const { author, comment, bottom } = this.props.data
-
-    return (
-      <Root>
-        <Author {...author} />
-        <Comment {...comment} />
-        <Bottom {...bottom} />
-      </Root>
-    );
-  }
-}
+const Item = ({ author, comment, bottom }) => (
+  <Root>
+    <Author {...author} />
+    <Comment {...comment} />
+    <Bottom {...bottom} />
+  </Root>
+)
 
 export default Item;
