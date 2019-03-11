@@ -49,21 +49,18 @@ const selector = createSelector(
   (list, limit) => ({ hidden: list.length <= limit })
 )
 
-class ShowMore extends Component {
-  render() {
-    const { loading, showMore, hidden } = this.props
-    if (hidden) return null
-    return (
-      <Root
-        onClick={showMore}
-        disabled={loading}
-        loading={loading}
-      >
-        <Ink />
-        {loading ? 'Loading' : 'Load more'}
-      </Root>
-    );
-  }
+const ShowMore = ({ loading, showMore, hidden }) => {
+  if (hidden) return null
+  return (
+    <Root
+      onClick={showMore}
+      disabled={loading}
+      loading={loading}
+    >
+      <Ink />
+      {loading ? 'Loading' : 'Load more'}
+    </Root>
+  );
 }
 
 export default connect(
