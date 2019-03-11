@@ -31,7 +31,8 @@ export default handleActions(
     }),
     LOAD_SUCCESS: (state, action) => ({
       ...state,
-      list: action.data.data,
+      // NOTE: bad practice, I did it to make it work on gitlab pages
+      list: (process.env.NODE_ENV === 'production' ? action.data.data.list : action.data.data),
     }),
   },
   initialState
