@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
-// import reset from 'styled-reset' TODO: use reset-css later
 import { Provider } from 'react-redux'
 import List from './List'
 import ShowMore from './ShowMore'
