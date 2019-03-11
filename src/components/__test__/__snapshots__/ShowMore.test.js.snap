@@ -2,8 +2,6 @@
 
 exports[`hidden 1`] = `null`;
 
-exports[`hidden 2`] = `null`;
-
 exports[`loading 1`] = `
 <ForwardRef
   disabled={true}
