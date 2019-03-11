@@ -1,3 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`hidden 1`] = `null`;
+
+exports[`hidden 2`] = `null`;
+
+exports[`loading 1`] = `
+<ForwardRef
+  disabled={true}
+  loading={true}
+>
+  <e
+    background={true}
+    className="ink"
+    duration={1000}
+    opacity={0.25}
+    radius={150}
+    recenter={true}
+  />
+  Loading
+</ForwardRef>
+`;
+
+exports[`ok 1`] = `
+<ForwardRef
+  disabled={false}
+  loading={false}
+>
+  <e
+    background={true}
+    className="ink"
+    duration={1000}
+    opacity={0.25}
+    radius={150}
+    recenter={true}
+  />
+  Load more
+</ForwardRef>
+`;

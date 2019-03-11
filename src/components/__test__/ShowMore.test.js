@@ -1,16 +1,24 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux'
-import ShowMore from '../ShowMore';
-import store from '../../store'
+import ShallowRenderer from 'react-test-renderer/shallow';
+import { ShowMore } from '../ShowMore';
 
-// TODO: figure out how to initialize a store with other values in tests
 it('hidden', () => {
-  const tree = renderer.create(
-    <Provider store={store}>
-      <ShowMore />
-    </Provider>
+  const tree = new ShallowRenderer().render(
+    <ShowMore hidden />
   )
-  .toJSON()
+  expect(tree).toMatchSnapshot();
+});
+
+it('loading', () => {
+  const tree = new ShallowRenderer().render(
+    <ShowMore loading />
+  )
+  expect(tree).toMatchSnapshot();
+});
+
+it('ok', () => {
+  const tree = new ShallowRenderer().render(
+    <ShowMore loading={false} />
+  )
   expect(tree).toMatchSnapshot();
 });

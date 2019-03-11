@@ -49,7 +49,7 @@ const selector = createSelector(
   (list, limit) => ({ hidden: list.length <= limit })
 )
 
-const ShowMore = ({ loading, showMore, hidden }) => {
+export const ShowMore = ({ loading, showMore, hidden }) => {
   if (hidden) return null
   return (
     <Root
