@@ -52,7 +52,7 @@ const selector = createSelector(
   })
 )
 
-class List extends Component {
+export class List extends Component {
   componentDidMount() {
     this.props.load()
   }
