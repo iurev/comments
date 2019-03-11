@@ -55,6 +55,7 @@ const CommentButton = styled.button`
   cursor: pointer;
   transition: color ease-out 0.3s;
   outline: none;
+  background: transparent;
 
   &:hover, &:active {
     color: ${p => p.theme.mediumFontColor};
