@@ -20,7 +20,7 @@ const selector = createSelector(
   feedbacksLimitedList,
   list => ({
     feedbacks: list.map((item) => {
-      const { rating, author, body, title, attachments, statistics, closed, last_activity_at, created_at } = item
+      const { rating, author, body, title, attachments, statistics, closed, lastActivityAt, createdAt } = item
       let avatar
       let image
       try {
@@ -30,10 +30,10 @@ const selector = createSelector(
         image = attachments[0].variants.profile.url
       } catch {}
       // TODO: add toCamelCase function to data
-      const { vote_count, answer_count } = statistics
+      const { voteCount, answerCount } = statistics
   
-      const authorTime = humanizeDuration(new Date() - new Date(last_activity_at), { language: 'de', largest: 1 })
-      const commentTime = humanizeDuration(new Date() - new Date(created_at), { language: 'de', largest: 1 })
+      const authorTime = humanizeDuration(new Date() - new Date(lastActivityAt), { language: 'de', largest: 1 })
+      const commentTime = humanizeDuration(new Date() - new Date(createdAt), { language: 'de', largest: 1 })
 
       return {
         author: {
@@ -49,8 +49,8 @@ const selector = createSelector(
         },
         bottom: {
           closed,
-          voteCount: vote_count,
-          answerCount: answer_count,
+          voteCount: voteCount,
+          answerCount: answerCount,
           time: commentTime,
         },
       }
