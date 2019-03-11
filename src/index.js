@@ -5,8 +5,8 @@ import * as serviceWorker from './serviceWorker';
 
 const createRoot = () => {
   const root = document.createElement('div')
-  root.style.width = '100% !important'
-  root.style.height = '100% !important'
+  root.style.width = '100%'
+  root.style.height = '100%'
   return root
 }
 
