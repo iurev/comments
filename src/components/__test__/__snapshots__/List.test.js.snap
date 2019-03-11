@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1 feedback 1`] = `
-<ForwardRef>
-  <Item />
-</ForwardRef>
+<ListView
+  feedbacks={
+    Array [
+      Object {},
+    ]
+  }
+/>
 `;
 
-exports[`empty feedbacks 1`] = `<ForwardRef />`;
+exports[`empty feedbacks 1`] = `
+<ListView
+  feedbacks={Array []}
+/>
+`;
