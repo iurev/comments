@@ -3,7 +3,21 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const createRoot = () => {
+  const root = document.createElement('div')
+  root.style.width = '100% !important'
+  root.style.height = '100% !important'
+  return root
+}
+
+const renderAtCurrentScript = () => {
+  const currentScript = document.currentScript
+  const root = createRoot()
+  currentScript.parentNode.insertBefore(root, currentScript)
+  ReactDOM.render(<App />, root);
+}
+
+renderAtCurrentScript()
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
