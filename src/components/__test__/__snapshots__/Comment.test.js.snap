@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`with all attrs 1`] = `
+<div
+  className="sc-bdVaJa jWKkjw"
+>
+  <div
+    className="sc-bwzfXH fIVpWC"
+  >
+    test
+  </div>
+  <div
+    className="sc-htpNat kqVAcx"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test",
+      }
+    }
+  />
+</div>
+`;

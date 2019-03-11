@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
-import Html from 'dangerously-set-inner-html'
 
 const Root = styled.div`
   margin-bottom: 10px;
@@ -17,17 +16,14 @@ const Text = styled.div`
   font-size: 14px;
 `
 
-class Item extends Component {
-  render() {
-    return (
-      <Root>
-        <Title>{this.props.title}</Title>
-        <Text>
-          <Html html={this.props.text} />
-        </Text>
-      </Root>
-    );
-  }
-}
+const Comment = ({ title, text }) => (
+  <Root>
+    <Title>{title}</Title>
+    <Text dangerouslySetInnerHTML={{
+      __html: text
+    }}>
+    </Text>
+  </Root>
+)
 
-export default Item;
+export default Comment;
