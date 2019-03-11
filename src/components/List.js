@@ -22,8 +22,12 @@ const selector = createSelector(
     feedbacks: list.map((item) => {
       const { author, body, title, attachments, statistics, closed, last_activity_at, created_at } = item
       let avatar
+      let image
       try {
-        avatar = attachments[0].variants.profile.url
+        avatar = author.avatar.variants.profile.url
+      } catch {}
+      try {
+        image = attachments[0].variants.profile.url
       } catch {}
       // TODO: add toCamelCase function to data
       const { vote_count, answer_count } = statistics
@@ -40,6 +44,7 @@ const selector = createSelector(
         comment: {
           title,
           text: body,
+          image,
         },
         bottom: {
           closed,

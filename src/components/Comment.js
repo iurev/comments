@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 
 const Root = styled.div`
+  display: flex;
+  flex-direction: row;
   margin-bottom: 10px;
 `
 
@@ -16,13 +18,26 @@ const Text = styled.div`
   font-size: 14px;
 `
 
-const Comment = ({ title, text }) => (
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const Image = styled.img`
+  margin-right: 10px;
+  width: 140px;
+`
+
+const Comment = ({ title, text, image }) => (
   <Root>
-    <Title>{title}</Title>
-    <Text dangerouslySetInnerHTML={{
-      __html: text
-    }}>
-    </Text>
+    {image && <Image src={image} />}
+    <TextWrapper>
+      <Title>{title}</Title>
+      <Text dangerouslySetInnerHTML={{
+        __html: text
+      }}>
+      </Text>
+    </TextWrapper>
   </Root>
 )
 
