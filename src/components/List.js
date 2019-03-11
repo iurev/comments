@@ -20,7 +20,7 @@ const selector = createSelector(
   feedbacksLimitedList,
   list => ({
     feedbacks: list.map((item) => {
-      const { author, body, title, attachments, statistics, closed, last_activity_at, created_at } = item
+      const { rating, author, body, title, attachments, statistics, closed, last_activity_at, created_at } = item
       let avatar
       let image
       try {
@@ -45,6 +45,7 @@ const selector = createSelector(
           title,
           text: body,
           image,
+          rating,
         },
         bottom: {
           closed,

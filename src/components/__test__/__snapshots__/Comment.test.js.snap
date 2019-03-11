@@ -1,53 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`with all attrs 1`] = `
-<div
-  className="sc-bdVaJa gavWF"
->
-  <img
-    className="sc-ifAKCX fRgboN"
+<ForwardRef>
+  <ForwardRef
     src="https://example/image.png"
   />
-  <div
-    className="sc-bxivhb glCqXO"
-  >
-    <div
-      className="sc-bwzfXH fIVpWC"
-    >
-      test
-    </div>
-    <div
-      className="sc-htpNat kqVAcx"
+  <ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        test
+      </ForwardRef>
+      <Stars />
+    </ForwardRef>
+    <ForwardRef
       dangerouslySetInnerHTML={
         Object {
           "__html": "test",
         }
       }
     />
-  </div>
-</div>
+  </ForwardRef>
+</ForwardRef>
 `;
 
 exports[`without image 1`] = `
-<div
-  className="sc-bdVaJa gavWF"
->
-  <div
-    className="sc-bxivhb glCqXO"
-  >
-    <div
-      className="sc-bwzfXH fIVpWC"
-    >
-      test
-    </div>
-    <div
-      className="sc-htpNat kqVAcx"
+<ForwardRef>
+  <ForwardRef>
+    <ForwardRef>
+      <ForwardRef>
+        test
+      </ForwardRef>
+      <Stars />
+    </ForwardRef>
+    <ForwardRef
       dangerouslySetInnerHTML={
         Object {
           "__html": "test",
         }
       }
     />
-  </div>
-</div>
+  </ForwardRef>
+</ForwardRef>
 `;
