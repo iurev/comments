@@ -31,7 +31,7 @@ export default handleActions(
     }),
     LOAD_SUCCESS: (state, action) => ({
       ...state,
-      list: action.data.data.list,
+      list: action.data.data,
     }),
   },
   initialState
