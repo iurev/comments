@@ -1,3 +1,4 @@
-import _promises from './promises'
+import promisesInner from './promises'
 
-export const promises = _promises
+
+export const promises = promisesInner

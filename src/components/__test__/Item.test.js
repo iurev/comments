@@ -1,9 +1,10 @@
-import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
-import Item from '../Item';
+import React from 'react'
+import ShallowRenderer from 'react-test-renderer/shallow'
+import Item from '../Item'
+
 
 it('renders', () => {
-  const renderer = new ShallowRenderer();
+  const renderer = new ShallowRenderer()
   const tree = renderer
     .render(<Item
       data={{
@@ -12,5 +13,6 @@ it('renders', () => {
         bottom: {},
       }}
     />)
-  expect(tree).toMatchSnapshot();
-});
+
+  expect(tree).toMatchSnapshot()
+})

@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 import Stars from './Stars'
+
 
 const Root = styled.div`
   display: flex;
@@ -10,13 +11,13 @@ const Root = styled.div`
 `
 
 const Title = styled.div`
-  color: ${p => p.theme.darkFontColor};
+  color: ${(p) => p.theme.darkFontColor};
   font-size: 24px;
   margin-right: 10px;
 `
 
 const Text = styled.div`
-  color: ${p => p.theme.mediumFontColor};
+  color: ${(p) => p.theme.mediumFontColor};
   font-size: 14px;
 `
 
@@ -46,11 +47,11 @@ const Comment = ({ title, text, image, rating }) => (
         <Stars count={rating} />
       </TitleAndStarsWrapper>
       <Text dangerouslySetInnerHTML={{
-        __html: text
-      }}>
-      </Text>
+        __html: text,
+      }}
+      />
     </TextWrapper>
   </Root>
 )
 
-export default Comment;
+export default Comment

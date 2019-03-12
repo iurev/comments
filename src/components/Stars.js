@@ -1,6 +1,7 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 import { Star } from 'styled-icons/boxicons-solid/Star'
+
 
 const Root = styled.div`
   display: flex;
@@ -12,14 +13,14 @@ const StyledStar = styled(Star)`
   height: 20px;
   margin-right: 5px;
   path {
-    fill: ${p => p.theme.green}
+    fill: ${(p) => p.theme.green}
   }
 `
 
 const Stars = ({ count }) => (
   <Root>
-    {Array(count).fill().map((_, i) => <StyledStar key={i} />)}
+    {new Array(count).fill().map((_, i) => <StyledStar key={i} />)}
   </Root>
 )
 
-export default Stars;
+export default Stars

@@ -1,14 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
+import Author from '../Author'
 
-import Author from '../Author';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Author />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
 it('with all attrs', () => {
   const tree = renderer
@@ -17,16 +11,18 @@ it('with all attrs', () => {
       name="John Doe"
       time="5 mins"
     />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    .toJSON()
+
+  expect(tree).toMatchSnapshot()
+})
 
 it('without attrs', () => {
   const tree = renderer
     .create(<Author />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    .toJSON()
+
+  expect(tree).toMatchSnapshot()
+})
 
 it('without avatar', () => {
   const tree = renderer
@@ -34,6 +30,7 @@ it('without avatar', () => {
       name="John Doe"
       time="5 mins"
     />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+    .toJSON()
+
+  expect(tree).toMatchSnapshot()
+})

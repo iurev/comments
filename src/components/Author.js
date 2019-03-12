@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 import { UserCircle } from 'styled-icons/boxicons-solid/UserCircle'
 
@@ -39,7 +39,7 @@ const DefaultAvatar = styled(UserCircle)`
   }
 
   path {
-    fill: ${p => p.theme.lightFontColor};
+    fill: ${(p) => p.theme.lightFontColor};
   }
 `
 
@@ -51,7 +51,7 @@ const TextWrapper = styled.div`
 const Text = styled.div`
   font-size: 12px;
   line-height: 12px;
-  color: ${p => p.theme.mediumFontColor};
+  color: ${(p) => p.theme.mediumFontColor};
 
   &:first-child {
     margin-bottom: 2px;
@@ -72,6 +72,6 @@ const Author = ({ name, avatar, time }) => (
       <Text>vor {time}</Text>
     </TextWrapper>
   </Root>
-);
+)
 
-export default Author;
+export default Author

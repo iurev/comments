@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled, { css } from 'styled-components'
 import { connect } from 'react-redux'
 import Ink from 'react-ink'
@@ -10,13 +10,14 @@ import {
   feedbacksLimit,
 } from '../selectors'
 
+
 const Root = styled.button`
   position: relative;
-  border: 2px solid ${p => p.theme.green};
+  border: 2px solid ${(p) => p.theme.green};
   width: 70px;
   height: 70px;
   border-radius: 35px;
-  color: ${p => p.theme.green};
+  color: ${(p) => p.theme.green};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,12 +30,12 @@ const Root = styled.button`
   user-select: none;
 
   &:hover {
-    background: ${p => p.theme.lightGreen};
+    background: ${(p) => p.theme.lightGreen};
   }
 
   ${ifProp('loading', css`
-    border: 2px solid ${p => p.theme.mediumFontColor};
-    color: ${p => p.theme.mediumFontColor};
+    border: 2px solid ${(p) => p.theme.mediumFontColor};
+    color: ${(p) => p.theme.mediumFontColor};
     cursor: default;
     pointer-events: none;
     &:hover {
@@ -46,7 +47,7 @@ const Root = styled.button`
 const selector = createSelector(
   feedbacksList,
   feedbacksLimit,
-  (list, limit) => ({ hidden: list.length <= limit })
+  (list, limit) => ({ hidden: list.length <= limit }),
 )
 
 export const ShowMore = ({ loading, showMore, hidden }) => {
@@ -60,10 +61,10 @@ export const ShowMore = ({ loading, showMore, hidden }) => {
       <Ink />
       {loading ? 'Loading' : 'Load more'}
     </Root>
-  );
+  )
 }
 
 export default connect(
-  state => selector(state),
+  (state) => selector(state),
   actions,
-)(ShowMore);
+)(ShowMore)
